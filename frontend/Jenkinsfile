@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         // REPO_LINK = 'https://github.com/askyourmentors/full-stack-crud-project-with-react-node-mysql.git'
-        REPO_LINK = 'https://github.com/mahadihassanrazib/vagrant-test.git'
+        REPO_LINK = 'https://github.com/mahadihassanrazib/vagrant-test.git' // private repo
         REPO_BRANCH = 'main'
     }
     stages {
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo 'Cloning repository from ${REPO_LINK}'
 
-                git branch: env.REPO_BRANCH, url: env.REPO_LINK
+                git branch: env.REPO_BRANCH, url: env.REPO_LINK, credentialsId: 'my-github-private-repo-creds'
 
                 script {
                     sh "ls -lah"

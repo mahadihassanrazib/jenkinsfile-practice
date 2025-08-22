@@ -1,7 +1,8 @@
 pipeline {
     agent any
     environment {
-        REPO_LINK = 'https://github.com/askyourmentors/full-stack-crud-project-with-react-node-mysql.git'
+        // REPO_LINK = 'https://github.com/askyourmentors/full-stack-crud-project-with-react-node-mysql.git'
+        REPO_BRANCH = 'https://github.com/mahadihassanrazib/vagrant-test.git'
         REPO_BRANCH = 'main'
     }
     stages {
